@@ -3,9 +3,11 @@ from pathlib import Path
 
 from loguru import logger
 
+dir_ = 'AdobeAnalytics'
+
 
 def main():
-    my_dir = Path.home() / 'projects' / 'Airflow' / 'dags' / 'AdobeAnalytics'
+    my_dir = Path.home() / 'projects' / 'Airflow' / 'dags' / dir_
     for i in my_dir.glob('*.py'):
         with i.open() as f:
             contents_ = f.read()
