@@ -1,0 +1,11 @@
+# Created by .ignore support plugin (hsz.mobi)
+### jupyter notebook template
+.ipynb_checkpoints/
+.idea/
+
+# IntelliJ project files
+*.iml
+out
+gen
+
+.pytest_cache

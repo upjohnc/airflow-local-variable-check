@@ -1,0 +1,17 @@
+# note: added some packages through pip install
+# and did a `pre-commit install` http://pre-commit.com/
+repos:
+  - repo: git://github.com/pre-commit/pre-commit-hooks
+    sha: v0.9.2
+    hooks:
+      - id: check-merge-conflict
+      - id: trailing-whitespace
+      - id: check-yaml
+      - id: debug-statements
+      - id: flake8
+        args: [--max-line-length=165, --ignore=E402]
+  - repo: git://github.com/upjohnc/precommit-todo-check
+    sha: 1.1.0
+    hooks:
+      - id: python-todo-check
+        args: []
