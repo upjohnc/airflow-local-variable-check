@@ -3,7 +3,7 @@ from pathlib import Path
 
 from loguru import logger
 
-dir_ = 'AdobeAnalytics'
+dir_ = 'ESET_Renewal'
 
 
 def main():
@@ -17,10 +17,8 @@ def main():
         if re.search(r'{}'.format(email_address), contents_, re.IGNORECASE):
             logger.info('Bad Email address {}  : {}'.format(email_address, i.resolve()))
 
-    # todo: do recursive check
-    # todo: add test
-    test_dir = Path.home() / 'projects' / 'Airflow' / 'tests' / 'tests_ad_roll'
-    for i in test_dir.glob('*.py'):
+    test_dir = Path.home() / 'projects' / 'Airflow' / 'tests'
+    for i in test_dir.glob('**/*.py'):
         with i.open() as f:
             contents_ = f.read()
         content_by_line = contents_.splitlines()
