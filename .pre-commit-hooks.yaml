@@ -1,0 +1,7 @@
+- id: python-todo-check
+  name: Look for todo markers
+  description: This hook looks for todo in python code.
+  entry: python-todo-check
+  language: python
+  files: \.py$
+
