@@ -1,7 +1,7 @@
-- id: python-todo-check
-  name: Look for todo markers
-  description: This hook looks for todo in python code.
-  entry: python-todo-check
+- id: airflow-check
+  name: Look for locally testing things in Dag
+  description: Look for locally testing things in Dag
+  entry: airflow-check
   language: python
   files: \.py$
 
