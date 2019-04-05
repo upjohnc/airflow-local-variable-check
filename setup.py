@@ -1,12 +1,10 @@
-from distutils.core import setup
+from setuptools import find_packages, setup
 
 setup(
-    name='airflow_check_local_variables',
-    version='1.0.0',
-    packages=[''],
-    url='',
-    license='',
-    author='charlesupjohn',
-    author_email='',
-    description=''
+    packages=find_packages('.', exclude=('tests*', 'testing*')),
+    entry_points={
+        'console_scripts': [
+            'airflow-check = airflow_hook.check_local_test_items:main',
+        ],
+    },
 )
