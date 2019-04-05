@@ -40,6 +40,7 @@ def main():
     test_files = list(filter(lambda x: x is not None, results))
     for file in test_files:
         for file_name, lines in file.items():
+            print('Missing assert statements:')
             print(file_name)
             print('lines: ', [i['line_number'] for i in lines])
             if file_name:
