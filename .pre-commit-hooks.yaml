@@ -4,4 +4,3 @@
   entry: airflow-check
   language: python
   files: \.py$
-
