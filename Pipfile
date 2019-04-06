@@ -8,6 +8,8 @@ verify_ssl = true
 [packages]
 loguru = "*"
 isort = "*"
+pytest = "*"
+jmespath = "*"
 
 [requires]
 python_version = "3.7"
