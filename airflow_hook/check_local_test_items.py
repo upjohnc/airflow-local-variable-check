@@ -23,7 +23,7 @@ def check_assert_in_file(file_path: Path):
     for line_number, line in enumerate(content_by_line):
         if re.search(r'\bwith.*\.connect.*', line, re.IGNORECASE):
             if not re.search(r'\bassert.*', content_by_line[line_number + 1]):
-                file_results.append({'line': line, 'line_number': line_number})
+                file_results.append({'line': line, 'line_number': line_number + 1})
     return None if len(file_results) == 0 else {str(file_path): file_results}
 
 
