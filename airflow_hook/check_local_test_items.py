@@ -45,8 +45,10 @@ def check_test_files(root_dir: Path):
 
 def check_dag_files(root_dir: Path, files: List):
     all_good = True
-    for i in [i for i in files if i.endswith('py') and i.startswith('dag') and i.is_file()]:
+    for i in [i for i in files if i.endswith('py') and i.startswith('dag')]:
         file_path = root_dir / i
+        if not file_path.is_file():
+            continue
 
         with file_path.open() as f:
             contents_ = f.read()
